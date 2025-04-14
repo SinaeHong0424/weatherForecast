@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <h1>Weather App</h1>
+            <form id="weather-form">
+                <input type="text" id="location-input" placeholder="Enter city name" required>
+                <button type="submit">Get Weather</button>
+            </form>
+        </div>
+        
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+
+        <div id="weather-container" class="weather-container hidden">
+            <div class="location-info">
+                <h2 id="location"></h2>
+                <p id="date-time"></p>
+            </div>
+            
+            <div class="current-weather">
+                <div class="temp-container">
+                    <span id="temperature" class="temperature"></span>
+                    <div class="unit-toggle">
+                        <button id="celsius" class="active">°C</button>
+                        <button id="fahrenheit">°F</button>
+                    </div>
+                </div>
+                <div class="weather-info">
+                    <div id="weather-icon" class="weather-icon"></div>
+                    <div id="weather-condition" class="weather-condition"></div>
+                </div>
+            </div>
+            
+            <div class="details">
+                <div class="detail-item">
+                    <i class="fas fa-thermometer-half"></i>
+                    <div>
+                        <span>Feels Like</span>
+                        <span id="feels-like"></span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-tint"></i>
+                    <div>
+                        <span>Humidity</span>
+                        <span id="humidity"></span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-wind"></i>
+                    <div>
+                        <span>Wind</span>
+                        <span id="wind"></span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-cloud"></i>
+                    <div>
+                        <span>Clouds</span>
+                        <span id="clouds"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="weather-gif" class="weather-gif">
+            </div>
+        </div>
+        
+        <div id="error-container" class="error-container hidden">
+            <i class="fas fa-exclamation-circle"></i>
+            <p id="error-message"></p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

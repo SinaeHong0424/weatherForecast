@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-container h1 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 28px;
+}
+
+#weather-form {
+    display: flex;
+    gap: 10px;
+}
+
+#location-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#location-input:focus {
+    border-color: #4285f4;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3367d6;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #4285f4;
+    animation: spin 1s ease-in-out infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.weather-container {
+    padding: 20px;
+}
+
+.location-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.location-info h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.location-info p {
+    color: #666;
+}
+
+.current-weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.temp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temperature {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.unit-toggle {
+    display: flex;
+    margin-top: 5px;
+}
+
+.unit-toggle button {
+    padding: 5px 10px;
+    background-color: #eee;
+    color: #333;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+.unit-toggle button.active {
+    background-color: #4285f4;
+    color: white;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.weather-condition {
+    text-align: center;
+    font-size: 18px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.detail-item i {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #4285f4;
+}
+
+.detail-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-item span:first-child {
+    font-size: 14px;
+    color: #666;
+}
+
+.detail-item span:last-child {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.weather-gif {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.weather-gif img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.error-container {
+    text-align: center;
+    padding: 40px 0;
+    color: #d32f2f;
+}
+
+.error-container i {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Weather theme classes */
+.clear-sky {
+    background: linear-gradient(to bottom right, #4a90e2, #87ceeb);
+    color: white;
+}
+
+.cloudy {
+    background: linear-gradient(to bottom right, #9fa9b0, #d8d8d8);
+}
+
+.rainy {
+    background: linear-gradient(to bottom right, #34495e, #2c3e50);
+    color: white;
+}
+
+.snowy {
+    background: linear-gradient(to bottom right, #f1f1f1, #e0e0e0);
+}
+
+.stormy {
+    background: linear-gradient(to bottom right, #2c3e50, #1a1a2e);
+    color: white;
+}
+
+.night {
+    background: linear-gradient(to bottom right, #0f2027, #2c5364);
+    color: white;
+}
+
+.foggy {
+    background: linear-gradient(to bottom right, #b3b3b3, #d3d3d3);
+}
